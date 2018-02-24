@@ -19,7 +19,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Main2Activity" />
-        <activity android:name=".SignInAct"></activity>
+        <activity android:name=".SignInAct" />
+        <activity android:name=".HomeAct"></activity>
     </application>
 
 </manifest>
