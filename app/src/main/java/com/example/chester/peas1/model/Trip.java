@@ -1,7 +1,6 @@
 package com.example.chester.peas1.model;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by andreyv on 2018-02-24.
@@ -11,7 +10,8 @@ public class Trip {
 
     private int startTime = 0;// unix time
     private int arrivalTime = 0; //unix time
-    private User driver = new User(); //user with driver permissions to host the ride
+    public User driver; //user with driver permissions to host the ride
+    public ArrayList<User> passengers = new ArrayList<>();
     private int passengerNum = 0; //num of users
 
     private String origin = "";
@@ -41,6 +41,10 @@ public class Trip {
 
     public int getPassengerNum(){
         return passengerNum;
+    }
+
+    public addPassenger(User passenger){
+        this.passengers.add(passenger);
     }
 
 }

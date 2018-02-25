@@ -9,6 +9,7 @@ public class User {
     private String password;
     private String firstName;
     private String lastName;
+    private String phoneNumber;
 
     public User(String email, String password, String firstName, String lastName){
         this.email = email;
@@ -31,6 +32,10 @@ public class User {
 
     public String getLastName(){
         return this.lastName;
+    }
+
+    public String getPhoneNumber(){
+        return this.phoneNumber;
     }
 
 

@@ -36,4 +36,13 @@ public class TripController {
         tripList.add(trip);
     }
 
+    public void addTrip(int startTime, int arrivalTime, User driver, String origin, String destination){
+        Trip trip = new Trip(startTime, arrivalTime, driver, origin, destination);
+        tripList.add(trip);
+    }
+
+    public void pushTripTable() {
+        // push trip table to firebase
+    }
+
 }
