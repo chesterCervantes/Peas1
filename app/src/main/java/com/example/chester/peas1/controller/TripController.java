@@ -4,7 +4,6 @@ import com.example.chester.peas1.model.Trip;
 import com.example.chester.peas1.model.User;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by andreyv on 2018-02-24.

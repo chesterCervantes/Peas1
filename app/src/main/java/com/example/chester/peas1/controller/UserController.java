@@ -3,7 +3,6 @@ package com.example.chester.peas1.controller;
 import com.example.chester.peas1.model.User;
 
 import java.util.ArrayList;
-import java.util.Objects;
 
 /**
  * Created by andreyv on 2018-02-24.
@@ -23,8 +22,9 @@ public class UserController {
         String password = "";
         String firstName = "";
         String lastName = "";
+        String phoneNumber = "";
 
-        User user = new User(email, password, firstName, lastName);
+        User user = new User(email, password, firstName, lastName, phoneNumber);
 
         this.userList.add(user);
     }
