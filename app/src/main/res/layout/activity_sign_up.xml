@@ -7,18 +7,16 @@
     android:background="#ffc97a"
 
     tools:context="com.example.chester.peas1.signUp"
-    tools:layout_editor_absoluteY="25dp">
+    tools:layout_editor_absoluteY="81dp">
 
     <EditText
         android:id="@+id/email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
         android:layout_marginTop="64dp"
         android:ems="10"
         android:hint="Enter Email"
         android:inputType="textEmailAddress"
-        app:layout_constraintBottom_toTopOf="@+id/password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -27,11 +25,10 @@
         android:id="@+id/password"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="23dp"
+        android:layout_marginTop="24dp"
         android:ems="10"
         android:hint="Enter Password"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/confirmPassword"
         app:layout_constraintStart_toStartOf="@+id/email"
         app:layout_constraintTop_toBottomOf="@+id/email" />
 
@@ -39,11 +36,10 @@
         android:id="@+id/confirmPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp"
+        android:layout_marginTop="24dp"
         android:ems="10"
         android:hint="Confirm Password"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/firstName"
         app:layout_constraintStart_toStartOf="@+id/password"
         app:layout_constraintTop_toBottomOf="@+id/password" />
 
@@ -51,11 +47,10 @@
         android:id="@+id/firstName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="23dp"
+        android:layout_marginTop="24dp"
         android:ems="10"
         android:hint="Enter First Name"
         android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/lastName"
         app:layout_constraintStart_toStartOf="@+id/confirmPassword"
         app:layout_constraintTop_toBottomOf="@+id/confirmPassword" />
 
@@ -63,36 +58,23 @@
         android:id="@+id/lastName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="23dp"
+        android:layout_marginTop="24dp"
         android:ems="10"
         android:hint="Enter Last Name"
         android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/phoneNumber"
         app:layout_constraintStart_toStartOf="@+id/firstName"
         app:layout_constraintTop_toBottomOf="@+id/firstName" />
 
     <Button
         android:id="@+id/btn_SignUp"
         android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginBottom="29dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="308dp"
         android:background="@drawable/round_button"
         android:text="Sign Up"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phoneNumber" />
-
-    <EditText
-        android:id="@+id/phoneNumber"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="30dp"
-        android:ems="10"
-        android:hint="Enter Phonee Number"
-        android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/btn_SignUp"
-        app:layout_constraintStart_toStartOf="@+id/lastName"
-        app:layout_constraintTop_toBottomOf="@+id/lastName" />
+        app:layout_constraintTop_toBottomOf="@+id/password" />
 
 </android.support.constraint.ConstraintLayout>
