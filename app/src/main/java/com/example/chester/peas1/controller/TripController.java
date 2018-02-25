@@ -34,6 +34,7 @@ public class TripController {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
+                fetchTripTable(dataSnapshot);
 
             }
 
@@ -45,7 +46,7 @@ public class TripController {
         });
     }
 
-    public void fetchTripTable() {
+    public void fetchTripTable(DataSnapshot dataSnapshot) {
 
         // probably for loop
         // extract a trip
