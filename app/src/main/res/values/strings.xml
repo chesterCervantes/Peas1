@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Peas1</string>
     <string name="btn_start">Start</string>
+    <string name="btn_login">Log In</string>
+    <string name="btn_signup">Sign Up</string>
+
 </resources>

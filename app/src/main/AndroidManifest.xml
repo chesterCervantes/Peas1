@@ -18,7 +18,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Main2Activity"></activity>
+        <activity android:name=".Main2Activity" />
+        <activity android:name=".SignInAct" />
+        <activity android:name=".HomeAct" />
+        <activity android:name=".TripInfoAct"></activity>
+        <activity android:name=".signUp"></activity>
     </application>
 
 </manifest>

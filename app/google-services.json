@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1043710706842",
+    "firebase_url": "https://hack-our-city-3171c.firebaseio.com",
+    "project_id": "hack-our-city-3171c",
+    "storage_bucket": "hack-our-city-3171c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1043710706842:android:d8a6f36ffca026ad",
+        "android_client_info": {
+          "package_name": "com.example.chester.peas1"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1043710706842-8ftm1pcalvjv6hgtn5vb1r2gvga2cibe.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.chester.peas1",
+            "certificate_hash": "6233cf493ca729845d0e59efc4616fffbe4ac515"
+          }
+        },
+        {
+          "client_id": "1043710706842-tfasp8bhjhrv6k20js353fskudjm0h5m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQ3XxYcElGg-m_mW_fPr-5kxkuagqJanE"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1043710706842-tfasp8bhjhrv6k20js353fskudjm0h5m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
