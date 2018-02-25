@@ -14,6 +14,8 @@ public class Main2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
         SetupSignUpButton();
+        SetupSignInButton();
+
 
 
     }
@@ -32,4 +34,17 @@ public class Main2Activity extends AppCompatActivity {
             }
         });
     }
+
+    private void SetupSignInButton() {
+        Button btn = (Button) findViewById(R.id.logIn);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =SignInAct.makeIntent(Main2Activity.this);
+                startActivity(intent);
+            }
+        });
+    }
+
+
 }
