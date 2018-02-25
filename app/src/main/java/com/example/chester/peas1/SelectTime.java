@@ -15,6 +15,8 @@ public class SelectTime extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_select_time);
         addActivity();
+        TimePicker tp = (TimePicker) this.findViewById(R.id.timePicker);
+        tp.setIs24HourView(true);
     }
 
     public static Intent makeIntent(Context context) {
