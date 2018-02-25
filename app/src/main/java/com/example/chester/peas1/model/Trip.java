@@ -12,7 +12,7 @@ public class Trip {
     private int startTime = 0;// unix time
     private int arrivalTime = 0; //unix time
     private User driver = new User(); //user with driver permissions to host the ride
-    private List passengers =  new ArrayList(); //list of users who will be sharing the ride
+    private int passengerNum = 0; //num of users
 
     private String origin = "";
     private String destination = "";
@@ -23,8 +23,8 @@ public class Trip {
         this.driver = driver;
     }
 
-    public void addPassenger(User passenger){
-        this.passengers.add(passenger);
+    public boolean addPassenger(User passenger){
+        return this.passengers.add(passenger);
     }
 
     public int getStartTime(){
@@ -42,7 +42,5 @@ public class Trip {
     public String getDestination(){
         return destination;
     }
-
-
 
 }
