@@ -22,6 +22,7 @@
         <activity android:name=".SignInAct" />
         <activity android:name=".HomeAct" />
         <activity android:name=".TripInfoAct"></activity>
+        <activity android:name=".signUp"></activity>
     </application>
 
 </manifest>
