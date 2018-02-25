@@ -8,6 +8,8 @@ import java.util.ArrayList;
 
 public class Trip {
 
+    private long tripID = 0;
+
     private int startTime = 0;// unix time
     private int arrivalTime = 0; //unix time
     public User driver; //user with driver permissions to host the ride
@@ -21,6 +23,7 @@ public class Trip {
         this.startTime = startTime;
         this.arrivalTime = arrivalTime;
         this.driver = driver;
+        this.tripID = System.currentTimeMillis();
     }
 
     public int getStartTime(){
@@ -46,5 +49,7 @@ public class Trip {
     public void addPassenger(User passenger){
         this.passengers.add(passenger);
     }
+
+    public long getTripID() { return this.tripID; }
 
 }
