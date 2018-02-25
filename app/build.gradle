@@ -4,7 +4,7 @@ android {
     compileSdkVersion 26
     defaultConfig {
         applicationId "com.example.chester.peas1"
-        minSdkVersion 16
+        minSdkVersion 23
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
@@ -25,4 +25,19 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
+    compile ('com.amazonaws:aws-android-sdk-mobile-client:2.6.7@aar') { transitive = true; }
+
+    compile 'com.amazonaws:aws-android-sdk-s3:2.6.+'
+
+    compile 'com.amazonaws:aws-android-sdk-core:2.6.+'
+    compile 'com.amazonaws:aws-android-sdk-auth-core:2.6.+@aar'
+    compile 'com.amazonaws:aws-android-sdk-auth-ui:2.6.+@aar'
+    compile 'com.amazonaws:aws-android-sdk-auth-userpools:2.6.+@aar'
+    compile 'com.amazonaws:aws-android-sdk-cognitoidentityprovider:2.6.+'
+    compile 'com.amazonaws:aws-android-sdk-pinpoint:2.6.+'
+
+    // Amazon DynamoDB for NoSQL tables
+    compile 'com.amazonaws:aws-android-sdk-ddb:2.6.+'
+    compile 'com.amazonaws:aws-android-sdk-ddb-mapper:2.6.+'
 }
