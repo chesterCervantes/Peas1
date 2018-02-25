@@ -23,6 +23,7 @@
         <activity android:name=".HomeAct" />
         <activity android:name=".TripInfoAct" />
         <activity android:name=".signUp" />
+        <activity android:name=".SelectTime"></activity>
     </application>
 
 </manifest>

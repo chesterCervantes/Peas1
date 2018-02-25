@@ -14,6 +14,8 @@ public class HomeAct extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         addTripButton();
+        addTimeButton();
+
 
     }
 
@@ -27,6 +29,17 @@ public class HomeAct extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent =TripInfoAct.makeIntent(HomeAct.this);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private void addTimeButton() {
+        Button btn = (Button) findViewById(R.id.btn_TimeSelect);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =SelectTime.makeIntent(HomeAct.this);
                 startActivity(intent);
             }
         });
