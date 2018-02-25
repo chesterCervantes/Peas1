@@ -9,10 +9,20 @@ import android.widget.Button;
 import android.widget.EditText;
 
 
+import com.example.chester.peas1.controller.TripController;
+import com.example.chester.peas1.controller.UserController;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class TripInfoAct extends AppCompatActivity {
+
+    private FirebaseDatabase database = FirebaseDatabase.getInstance();
+    private DatabaseReference myRef = database.getReference("Peas");
+    ///DatabaseReference usersRef = myRef.child("users");
+    private DatabaseReference postsRef = myRef.child("Trips");
+
+    //private Singleton singleton = Singleton.getInstance();
+    //private TripController tripController = singleton.getTripController();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,17 +47,26 @@ public class TripInfoAct extends AppCompatActivity {
                 String depTime = edit.getText().toString();
                 edit = (EditText) findViewById(R.id.txt_PlannedArival);
                 String arrTime = edit.getText().toString();
-                FirebaseDatabase database = FirebaseDatabase.getInstance();
-                DatabaseReference myRef = database.getReference("Peas");
-                ///DatabaseReference usersRef = myRef.child("users");
-                DatabaseReference postsRef = myRef.child("Trips");
+
+                /*int startTime = 1;
+                int arrivalTime = 2;
+                int passengerNum = 0;
+                String origin = "Burnaby";
+                String destination = "Surrey";
+                St*/
+
                 DatabaseReference newpostsRef = postsRef.push();
-                newpostsRef.child("StartLocation").setValue(location);
-                newpostsRef.child("StartTime").setValue(1);
-                newpostsRef.child("ArrivalTime").setValue("2");
-                newpostsRef.child("Location").setValue("Burnaby");
+                newpostsRef.child("startTime").setValue(1);
+                newpostsRef.child("arrivalTime").setValue(2);
+                newpostsRef.child("passengerNum").setValue(0);
+                newpostsRef.child("origin").setValue("Burnaby");
+                newpostsRef.child("destination").setValue("Surrey");
+                newpostsRef.child("driverEmail").setValue("a@b.c");
+                newpostsRef.child("passenger1Email").setValue("a1@b.c");
+                newpostsRef.child("passenger2Email").setValue("a2@b.c");
+                newpostsRef.child("passenger3Email").setValue("a3@b.c");
 
-
+                //tripController.addTrip(startTime, arrivalTime, passengerNum, origin, destination, driverEmail, passenger1Email, passenger2Email, passenger3Email);
             }
         });
     }

@@ -1,5 +1,7 @@
 package com.example.chester.peas1.model;
 
+import com.example.chester.peas1.controller.UserController;
+
 import java.util.ArrayList;
 
 /**
@@ -8,22 +10,35 @@ import java.util.ArrayList;
 
 public class Trip {
 
-    private long tripID = 0;
+    public int startTime;// unix time
+    public int arrivalTime; //unix time
+    public int passengerNum; //num of users
+    public String driverEmail;
+    public String passenger1Email;
+    public String passenger2Email;
+    public String passenger3Email;
+    public String origin;
+    public String destination;
+    public String key;
 
-    private int startTime = 0;// unix time
-    private int arrivalTime = 0; //unix time
     public User driver; //user with driver permissions to host the ride
+
     public ArrayList<User> passengers = new ArrayList<>();
-    private int passengerNum = 0; //num of users
 
-    private String origin = "";
-    private String destination = "";
-
-    public Trip(int startTime, int arrivalTime, User driver, String origin, String destination){
+    public Trip(int startTime, int arrivalTime, int passengerNum, String driverEmail, String passenger1Email, String passenger2Email, String passenger3Email, String origin, String destination) {
         this.startTime = startTime;
         this.arrivalTime = arrivalTime;
-        this.driver = driver;
-        this.tripID = System.currentTimeMillis();
+        this.passengerNum = passengerNum;
+        this.driverEmail = driverEmail;
+        this.passenger1Email = passenger1Email;
+        this.passenger2Email = passenger2Email;
+        this.passenger3Email = passenger3Email;
+        this.origin = origin;
+        this.destination = destination;
+    }
+
+    public Trip(){
+
     }
 
     public int getStartTime(){
@@ -50,6 +65,12 @@ public class Trip {
         this.passengers.add(passenger);
     }
 
-    public long getTripID() { return this.tripID; }
+    public void resolveUsers(UserController userController){
+        this.driver = userController.getUserByEmail(driverEmail);
+        this.passengers.add(userController.getUserByEmail(passenger1Email));
+        this.passengers.add(userController.getUserByEmail(passenger2Email));
+        this.passengers.add(userController.getUserByEmail(passenger3Email));
+    }
+
 
 }
