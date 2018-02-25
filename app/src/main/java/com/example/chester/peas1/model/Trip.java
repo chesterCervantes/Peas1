@@ -23,10 +23,6 @@ public class Trip {
         this.driver = driver;
     }
 
-    public boolean addPassenger(User passenger){
-        return this.passengers.add(passenger);
-    }
-
     public int getStartTime(){
         return startTime;
     }
@@ -41,6 +37,10 @@ public class Trip {
 
     public String getDestination(){
         return destination;
+    }
+
+    public int getPassengerNum(){
+        return passengerNum;
     }
 
 }

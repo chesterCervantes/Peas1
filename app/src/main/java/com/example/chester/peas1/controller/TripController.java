@@ -1,5 +1,8 @@
 package com.example.chester.peas1.controller;
 
+import com.example.chester.peas1.model.Trip;
+import com.example.chester.peas1.model.User;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,28 +12,28 @@ import java.util.List;
 
 public class TripController {
 
-    private List tripList;
+    public ArrayList<Trip> tripList = new ArrayList<>();
+    private UserController userController;
 
-    public TripController() {
-        this.tripList = fetchTripTable();
+    public TripController(UserController userController) {
+        fetchTripTable();
+        this.userController = userController;
     }
 
-    private List fetchTripTable() {
-        // extract trip
-        List tripList = new ArrayList();
+    public void fetchTripTable() {
 
         // probably for loop
+        // extract a trip
+        int startTime = 0;
+        int arrivalTime = 0;
+        String userEmail = "";
+        String origin = "Burnaby";
+        String destination = "Surrey";
+
+        User driver = userController.getUserByEmail(userEmail);
+
+        Trip trip = new Trip(startTime, arrivalTime, driver, origin, destination);
         tripList.add(trip);
-
-        return tripList;
-    }
-
-    public void updateTripTable(){
-        this.tripList = fetchTripTable();
-    }
-
-    public List getTripList() {
-        return this.tripList;
     }
 
 }
