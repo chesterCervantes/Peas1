@@ -10,6 +10,7 @@ import java.util.ArrayList;
 
 public class Trip {
 
+
     public int startTime;// unix time
     public int arrivalTime; //unix time
     public int passengerNum; //num of users
@@ -28,6 +29,7 @@ public class Trip {
     public Trip(int startTime, int arrivalTime, int passengerNum, String driverEmail, String passenger1Email, String passenger2Email, String passenger3Email, String origin, String destination) {
         this.startTime = startTime;
         this.arrivalTime = arrivalTime;
+
         this.passengerNum = passengerNum;
         this.driverEmail = driverEmail;
         this.passenger1Email = passenger1Email;
@@ -35,9 +37,7 @@ public class Trip {
         this.passenger3Email = passenger3Email;
         this.origin = origin;
         this.destination = destination;
-    }
-
-    public Trip(){
+    
 
     }
 
@@ -64,6 +64,7 @@ public class Trip {
     public void addPassenger(User passenger){
         this.passengers.add(passenger);
     }
+
 
     public void resolveUsers(UserController userController){
         this.driver = userController.getUserByEmail(driverEmail);

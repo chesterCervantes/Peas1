@@ -23,6 +23,8 @@ public class TripController {
 
     public ArrayList<Trip> tripList = new ArrayList<>();
     private UserController userController;
+    private DatabaseReference tripRef;
+
 
     private FirebaseDatabase database = FirebaseDatabase.getInstance();
     private DatabaseReference myRef = database.getReference("Peas");
@@ -52,6 +54,7 @@ public class TripController {
     }
 
     public void fetchTripTable(DataSnapshot dataSnapshot) {
+
         for(DataSnapshot ds : dataSnapshot.getChildren()){
             Trip trip = ds.getValue(Trip.class);
             trip.resolveUsers(userController);
