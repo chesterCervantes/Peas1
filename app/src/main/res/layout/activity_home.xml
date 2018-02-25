@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffc97a"
+
     tools:context="com.example.chester.peas1.HomeAct">
 
     <ListView
@@ -21,10 +23,11 @@
 
     <Button
         android:id="@+id/btn_CreateTrip"
-        android:layout_width="wrap_content"
+        android:layout_width="130dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="31dp"
-        android:layout_marginEnd="232dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="256dp"
+        android:background="@drawable/round_button"
         android:text="Create Trip"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,15 +35,16 @@
 
     <Button
         android:id="@+id/btn_TimeSelect"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="36dp"
-        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginEnd="28dp"
         android:layout_marginTop="8dp"
-        android:text="Select Arival Time"
+        android:background="@drawable/round_button"
+        android:text="Select Arrival Time"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/listView"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.933" />
 
 </android.support.constraint.ConstraintLayout>
