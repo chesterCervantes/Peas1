@@ -43,7 +43,7 @@ public class Trip {
         return passengerNum;
     }
 
-    public addPassenger(User passenger){
+    public void addPassenger(User passenger){
         this.passengers.add(passenger);
     }
 
