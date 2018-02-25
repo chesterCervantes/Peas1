@@ -31,7 +31,7 @@ public class UserController {
 
     public User getUserByEmail(String email){
         for(int i = 0; i < this.userList.size(); i++){
-            if(Objects.equals(this.userList.get(i).getEmail(), email)){
+            if(this.userList.get(i).getEmail().equals(email)){
                 return this.userList.get(i);
             }
         }
