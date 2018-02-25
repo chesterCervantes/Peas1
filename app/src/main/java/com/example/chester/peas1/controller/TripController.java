@@ -24,7 +24,7 @@ public class TripController {
     private DatabaseReference tripRef;
 
     public TripController(UserController userController, DatabaseReference tripRef) {
-        fetchTripTable();
+        //fetchTripTable();
         this.userController = userController;
         this.tripRef = tripRef;
 
@@ -47,6 +47,7 @@ public class TripController {
     }
 
     public void fetchTripTable(DataSnapshot dataSnapshot) {
+
 
         // probably for loop
         // extract a trip

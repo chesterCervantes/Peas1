@@ -69,6 +69,6 @@ public class HomeAct extends AppCompatActivity {
 
     }
 
-    private UserController userController = new UserController();
-    private TripController tripController = new TripController(userController, )
+    //private UserController userController = new UserController();
+    //private TripController tripController = new TripController(userController, )
 }
