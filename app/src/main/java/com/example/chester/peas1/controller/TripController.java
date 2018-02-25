@@ -8,13 +8,29 @@ import java.util.List;
  */
 
 public class TripController {
-    private List tripList = new ArrayList();
 
-    public void fetchTripTable() {
-        // extract trip
-        tripList.add(trip)
+    private List tripList;
+
+    public TripController() {
+        this.tripList = fetchTripTable();
     }
 
-    //
+    private List fetchTripTable() {
+        // extract trip
+        List tripList = new ArrayList();
+
+        // probably for loop
+        tripList.add(trip);
+
+        return tripList;
+    }
+
+    public void updateTripTable(){
+        this.tripList = fetchTripTable();
+    }
+
+    public List getTripList() {
+        return this.tripList;
+    }
 
 }
