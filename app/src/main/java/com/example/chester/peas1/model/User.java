@@ -5,8 +5,8 @@ package com.example.chester.peas1.model;
  */
 
 public class User {
-    private String password = "";
     private String email = "";
+    private String password = "";
     private String firstName = "";
     private String lastName = "";
 
