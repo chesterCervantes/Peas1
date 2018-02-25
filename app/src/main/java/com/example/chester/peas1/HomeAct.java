@@ -9,6 +9,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.example.chester.peas1.controller.TripController;
+import com.example.chester.peas1.controller.UserController;
+
 public class HomeAct extends AppCompatActivity {
     public static final int REQUEST_CODE_GET_ARRIVAL_TIME = 10;
     private int hours;
@@ -62,5 +65,10 @@ public class HomeAct extends AppCompatActivity {
 
     }
 
+
+
     }
+
+    private UserController userController = new UserController();
+    private TripController tripController = new TripController(userController, )
 }
